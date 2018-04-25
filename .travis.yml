@@ -3,13 +3,11 @@ language: generic
 services:
     - docker
 script:
-    - ./build
+    - "./build"
 deploy:
     provider: releases
     api_key:
-        secure: WTvsvICJHGmcohBjD6npPfCr+ZzjpaGq3WojkJHpjrm57pfcyuxL2spSVkR3nMtIRZI4UKdT4aOHjA9qKRRA+btTvylzOj3H+otKjVabFUfEPwq2aBmvKjT0p+9vzI43DDyYrEjz++Tn4IHUiuv+0d+8t3SQsTkzngcA+2FSNaYf6HltnfqfFuY1qXedS6KYQPZQYKJZlPnuPeZu96lFxEldQZM9mqtvD6xRuQO7QqUaA8CGnIuNr4zSmQ6mkoFakF1hoYlMIZXUN+pgSx+IPscM20Lj/rzbP93q+fNmoy03crrY0GcW4pGTUf47+/W+6sX7hbvtg5LBA6aJsN8xcENwRqFIxwe386Z1MlCiqAqEw5JTp9qk2ydUlXgW3nhjeo0njqXaUccJAemtt8IWBX1jUdpCfJ61bA89XDAKWpMt8QN0Dpk7rl5lZns1zDNCS+aheblArfNXld3hBSz5+CSgtj4qcsqEDRS5Sz/nSGc1WT9kCUX1bqy+dhuTalvPMcUc+A9YFoJJ/ZaJzRAyZRzK098Z5YKtZRmtVQ3tYwX5Y9IRylVjk600CIKUPNgm2vpS+tMCima64Hu/92XqVOkWnTOnG9hJlipIAPOx2v5xCEMiIeDeNfyqk6V4x/yVt64+hLohx5LWZ1NSzDMm2zEcFZqbUdRi344OxRPZQi0=
-    skip_cleanup: true
-    overwrite: true
-    file_glob: true
-    file:
-        - "./debs/*.deb"
+        secure: Jj4eJdjOwyr6bZqSH4kC6zBk/5ogHUQiTYacLIf5TCXy5AlP23PwHMtE7cyyXgWvgvkYngkxl1Yaas8EUbTOSIZFdOkiRGtGTUNGE9+PINS8Efxrh7N3wsUlh7joiDcp+W6FPfQ0l1f0LOvvygCQ2o5uOBd72I/wQYAwTQT0QhPdriPYXRykD5ROUbMVQzqsNf0X7/Uke+BnRRPWFah32xHHRn+LGwJdfBGdylHN5jf47XwxfLFiP3pA1Ax0mxWUN3+TAA/OXtR8kjPNHphLuVMQ5VCOQxu29dHhQ4CjZ7Tl4l46VZaGFmc3/XHO41BoXwBb5xtsZMmZ18TB6P4RPAU7+wxdjZK6sRHLG1yhdf8nrcxC7aIMMoTyGXhEnbRfevVBy69yWroe2IeAWPQH7NNXs+MXjF4hokbUtHY477b0DPU+Bzfe9pl8lKTZ0M2Ik02kw5gePwm37J66mjVWPH9MNE6dPWjXnyHk0Ae++mvhWqgq274SJJfHHg4+I7qC67WyUYThtm3KYK8ShzH8dHt/3TlCF6D54uoI2Pe+5Yxyyyaha7rSyAY7+Az8NfgfVrFK6KNMn589s7xMf+oQlPng+qvoLnSLP8+lrxIKihkMorFWk3lG/0rwgIRFqYRYj9EKM9Cp/OMy2Xa5SJgyoV3ifZJnlsXzWQbQ25jtVC8=
+        file: "./debs/*.deb"
+        on:
+            repo: nikolay-turpitko/my-purple-plugins
