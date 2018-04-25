@@ -3,7 +3,7 @@
 set -eu
 
 TAG="build-purple-plugins"
-DEBIAN_TARGET_DIR=/debs
+DEBIAN_TARGET_DIR=debs
 
 docker build --build-arg REL=$(date +%Y%m%d%H) --tag="${TAG}" .
 
