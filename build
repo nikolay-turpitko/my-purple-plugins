@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -eu
+
+TAG="build-purple-plugins"
+DEBIAN_TARGET_DIR=./debs
+
+docker build --build-arg REL=$(date +%Y%m%d%H) --tag="${TAG}" .
+
+CIDFILE="$(mktemp --dry-run)"
+ARGS="--cidfile=${CIDFILE} --net=none"
+
+docker run ${ARGS} "${TAG}"
+
+mkdir -p "${DEBIAN_TARGET_DIR}"
+docker cp "$(cat "${CIDFILE}")":"/debs"/ - \
+        | tar xf - -C "${DEBIAN_TARGET_DIR}" --strip-components=1
+
