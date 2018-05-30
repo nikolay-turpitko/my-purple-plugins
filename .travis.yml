@@ -4,13 +4,13 @@ services:
     - docker
 script:
     - "./build"
-if: tag IS blank
+before_deploy:
+      - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
     provider: releases
     api_key:
         secure: Jj4eJdjOwyr6bZqSH4kC6zBk/5ogHUQiTYacLIf5TCXy5AlP23PwHMtE7cyyXgWvgvkYngkxl1Yaas8EUbTOSIZFdOkiRGtGTUNGE9+PINS8Efxrh7N3wsUlh7joiDcp+W6FPfQ0l1f0LOvvygCQ2o5uOBd72I/wQYAwTQT0QhPdriPYXRykD5ROUbMVQzqsNf0X7/Uke+BnRRPWFah32xHHRn+LGwJdfBGdylHN5jf47XwxfLFiP3pA1Ax0mxWUN3+TAA/OXtR8kjPNHphLuVMQ5VCOQxu29dHhQ4CjZ7Tl4l46VZaGFmc3/XHO41BoXwBb5xtsZMmZ18TB6P4RPAU7+wxdjZK6sRHLG1yhdf8nrcxC7aIMMoTyGXhEnbRfevVBy69yWroe2IeAWPQH7NNXs+MXjF4hokbUtHY477b0DPU+Bzfe9pl8lKTZ0M2Ik02kw5gePwm37J66mjVWPH9MNE6dPWjXnyHk0Ae++mvhWqgq274SJJfHHg4+I7qC67WyUYThtm3KYK8ShzH8dHt/3TlCF6D54uoI2Pe+5Yxyyyaha7rSyAY7+Az8NfgfVrFK6KNMn589s7xMf+oQlPng+qvoLnSLP8+lrxIKihkMorFWk3lG/0rwgIRFqYRYj9EKM9Cp/OMy2Xa5SJgyoV3ifZJnlsXzWQbQ25jtVC8=
     skip_cleanup: true
-    overwrite: true
     file_glob: true
     file: "./debs/*.deb"
     on:
