@@ -4,6 +4,7 @@ services:
     - docker
 script:
     - "./build"
+if: tag IS blank
 before_deploy:
       - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
