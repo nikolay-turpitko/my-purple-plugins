@@ -17,6 +17,6 @@ All credits and issues address to plugin authors in their projects.
 
 ## TODO
 I don't know how to invoke Travis build manually and make tag automatically.
-As a workaround I'll add current date below to make it normal build.
+As a workaround I'll add current date below to cause it make a normal build.
 
 - 2018-12-30
