@@ -14,3 +14,9 @@ All credits and issues address to plugin authors in their projects.
 - https://github.com/EionRobb/skype4pidgin/tree/master/skypeweb
 - https://bitbucket.org/EionRobb/purple-hangouts
 - https://github.com/majn/telegram-purple
+
+## TODO
+I don't know how to invoke Travis build manually and make tag automatically.
+As a workaround I'll add current date below to make it normal build.
+
+- 2018-12-30
