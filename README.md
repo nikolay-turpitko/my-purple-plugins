@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nikolay-turpitko/my-purple-plugins.svg?branch=master)](https://travis-ci.org/nikolay-turpitko/my-purple-plugins)
+[![Build Status](https://travis-ci.com/nikolay-turpitko/my-purple-plugins.svg?branch=master)](https://travis-ci.com/nikolay-turpitko/my-purple-plugins)
 
 # my-purple-plugins
 
